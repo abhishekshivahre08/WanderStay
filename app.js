@@ -29,10 +29,10 @@ const User = require("./models/user.js");
 
 
 // connection with mongodb
-// const Mongourl = "mongodb://127.0.0.1:27017/wanderlust";
-console.log(process.env.ATLAS_URL);
+const Mongourl = "mongodb://127.0.0.1:27017/wanderlust";
+// console.log(process.env.ATLAS_URL);
 
-const dbUrl = process.env.ATLAS_URL;
+// const dbUrl = process.env.ATLAS_URL;
 main()
     .then(() => {
         console.log("connected to db");
@@ -41,7 +41,8 @@ main()
     });
 
 async function main() {
-    await mongoose.connect(dbUrl);
+    // await mongoose.connect(dbUrl);
+    await mongoose.connect(Mongourl);
 }
 
 
@@ -55,7 +56,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 
 const store = MongoStore.create({
-    mongoUrl: dbUrl,
+    // mongoUrl: dbUrl,
+    mongoUrl: Mongourl,
+
     crypto: {
         secret: process.env.SECRET,
     },
@@ -83,7 +86,7 @@ const sessionOption = {
 //     res.send("hi, i am root");
 // })
 app.get("/", (req, res) => {
-    res.redirect("/listings");   // root pe jao to listings page khul jaye
+    res.redirect("/listings"); // root pe jao to listings page khul jaye
 });
 
 
