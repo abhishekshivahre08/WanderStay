@@ -86,7 +86,7 @@
                                         <div class="card-body ">
                                             <h5 class="card-title ">
                                                 @
-                                                <%= review.author.username %>
+                                                <%= review.author ? review.author.username : "Anonymous" %>
                                             </h5>
                                             <p class="starability-result card-text " data-rating=<%=review.rating%>> </p>
                                             <p class="card-text ">

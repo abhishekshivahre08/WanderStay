@@ -3,7 +3,8 @@ if (process.env.NODE_ENV != "production") {
     // console.log(process.env);
 };
 
-
+const dns = require("dns");
+dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
 const express = require("express");
 const app = express();
@@ -29,10 +30,10 @@ const User = require("./models/user.js");
 
 
 // connection with mongodb
-const Mongourl = "mongodb://127.0.0.1:27017/wanderlust";
-// console.log(process.env.ATLAS_URL);
+// const Mongourl = "mongodb://127.0.0.1:27017/wanderlust";
+console.log(process.env.ATLAS_URL);
 
-// const dbUrl = process.env.ATLAS_URL;
+const dbUrl = process.env.ATLAS_URL;
 main()
     .then(() => {
         console.log("connected to db");
@@ -42,7 +43,7 @@ main()
 
 async function main() {
     // await mongoose.connect(dbUrl);
-    await mongoose.connect(Mongourl);
+    await mongoose.connect(dbUrl);
 }
 
 
@@ -56,8 +57,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 
 const store = MongoStore.create({
-    // mongoUrl: dbUrl,
-    mongoUrl: Mongourl,
+    mongoUrl: dbUrl,
+    // mongoUrl: Mongourl,
 
     crypto: {
         secret: process.env.SECRET,
@@ -127,8 +128,8 @@ app.use((req, res, next) => {
 
 
 // All listings  reviviews and User login/out  routes 
-app.use("/Listings", ListingsRouter);
-app.use("/Listings/:id/reviews", reviewsRouter);
+app.use("/listings", ListingsRouter);
+app.use("/listings/:id/reviews", reviewsRouter);
 app.use("/", UserRouter);
 
 // this for unwanded routes thsts user put in 
@@ -143,7 +144,7 @@ app.use((err, req, res, next) => {
     let { statusCode = 500, message = "something went wroung!" } = err;
     console.log("Error handler triggered:", err);
     // res.status(statusCode).send(message);
-    res.status(statusCode).render("Listings/error", { message });
+    res.status(statusCode).render("listings/error", { message });
 });
 
 
