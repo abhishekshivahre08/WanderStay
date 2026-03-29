@@ -1,5 +1,8 @@
 body {
+<<<<<<< HEAD
     /* font-family: "Plus Jakarta Sans", sans-serif !important; */
+=======
+>>>>>>> b4ae1a51ec612d6adaa1d6ba4d88c926fb60c6d2
     font-family: Arial, Helvetica, sans-serif !important;
     display: flex;
     flex-direction: column;
