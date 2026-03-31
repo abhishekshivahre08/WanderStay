@@ -1,13 +1,5 @@
 # 🌍 WanderStay – Travel Stay Booking Platform
 
-🔗 **Live Demo:** https://wanderstay-6u90.onrender.com/listings  
-
-WanderStay is a full-stack web application inspired by Airbnb that allows users to explore, create, and manage travel stay listings. It provides a seamless experience for both travelers and property owners.
-
----
-
-# 🌍 WanderStay – Travel Stay Booking Platform
-
 <p align="center">
   <a href="https://wanderstay-6u90.onrender.com/listings">
     <img src="https://img.shields.io/badge/🚀 Live Demo-WanderStay-blue?style=for-the-badge" />
@@ -15,6 +7,15 @@ WanderStay is a full-stack web application inspired by Airbnb that allows users 
   <img src="https://img.shields.io/badge/Tech-Node.js%20|%20Express%20|%20MongoDB-green?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" />
 </p>
+
+🔗 **Live Demo:** https://wanderstay-6u90.onrender.com/listings  
+
+WanderStay is a full-stack web application inspired by Airbnb that allows users to explore, create, and manage travel stay listings. It provides a seamless experience for both travelers and property owners.
+
+---
+
+
+
 
 ---
 
