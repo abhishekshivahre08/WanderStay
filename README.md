@@ -83,20 +83,25 @@ WanderStay/
 ---
 
 ## ⚙️ Installation & Setup
-
 ```bash
 git clone https://github.com/abhishekshivahre08/WanderStay.git
-cd WanderStay
+```
+```bash
 npm install
+```
+```bash
 node app.js
+```
 
 
-🔐 Authentication
-Only logged-in users can create listings
-Only owners can edit/delete listings
-Users can add/delete their own reviews
+## 🔐 Authentication
+- Only logged-in users can create listings
+- Only owners can edit/delete listings
+- Users can add/delete their own reviews
 
-👨‍💻 Author
 
-Abhishek Shivhare
-GitHub: https://github.com/abhishekshivahre08
+## 👨‍💻 Author :- Abhishek Shivhare
+* 🎓 B.Tech CSE Student @ GGCT (2027)
+* 💻 Full-Stack MERN Developer
+* 🌐 [Portfolio](https://abhishekshivhare.netlify.app/)
+* 🔗 [LinkedIn](https://www.linkedin.com/in/abhishek-shivhare-mern-dev/)
